@@ -11,7 +11,7 @@
 
 	"dependencies": {
 		"xunit": "2.2.0-beta3-build3350",
-		"dotnet-test-xunit": "2.2.0-preview3-build1030"
+		"dotnet-test-xunit": "2.2.0-preview3-build1045"
 	},
 
 	"testRunner": "xunit"
