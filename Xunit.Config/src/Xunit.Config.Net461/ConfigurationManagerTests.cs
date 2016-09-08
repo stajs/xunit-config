@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using static System.Console;
 
 namespace Xunit.Config.Net461
 {
@@ -8,9 +9,10 @@ namespace Xunit.Config.Net461
 		[Fact]
 		public void CanReadAppConfig()
 		{
+			WriteLine("AppDomain.CurrentDomain.SetupInformation.ConfigurationFile: " + AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 			var appSettings = ConfigurationManager.AppSettings;
-			Console.WriteLine("appSettings: " + (appSettings == null ? "null" : "not null"));
-			Console.WriteLine("appSettings[\"Foo\"]: " + appSettings["Foo"]);
+			WriteLine("appSettings: " + (appSettings == null ? "null" : "not null"));
+			WriteLine("appSettings[\"Foo\"]: " + appSettings["Foo"]);
 			Assert.NotNull(ConfigurationManager.AppSettings);
 			Assert.Equal("Bar", appSettings["Foo"]);
 		}
